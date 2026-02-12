@@ -128,15 +128,6 @@
    Page Loader
    ========================================================================== */
    $(window).load(function() {
-
-    console.log('test iniezione meta viewport');
-    var meta = document.createElement('meta');
-    meta.name = 'viewport';
-    meta.content = 'width=device-width, initial-scale=1, maximum-scale=1';
-    document.head.appendChild(meta);
-
     "use strict";
     $('#loader').fadeOut();
    });
-
-
