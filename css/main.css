@@ -1211,3 +1211,18 @@ footer {
     -webkit-transform: scale(1);
   }
 }
+
+
+
+
+
+
+
+
+#main{
+  min-height:70vh;
+}
+
+header#video-area {
+    height: 95svh;
+}
