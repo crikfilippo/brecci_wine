@@ -131,3 +131,32 @@
     "use strict";
     $('#loader').fadeOut();
    });
+
+
+
+
+   // Aggiunto per responsività in iframe
+$(window).on('load resize', function() {
+    var width = $(window).width();
+    
+    if (width < 768) {
+        // Per dispositivi mobili/tablet piccoli: riduci dimensioni testi e aggiusta layout
+        $('h1').css('font-size', '2rem');
+        $('p').css('font-size', '1rem');
+        $('.container').css('padding', '10px');
+        // Nascondi elementi non essenziali se necessario
+        $('.video-popup').hide();
+    } else if (width < 1024) {
+        // Per tablet/medium: dimensioni intermedie
+        $('h1').css('font-size', '2.5rem');
+        $('p').css('font-size', '1.2rem');
+        $('.container').css('padding', '20px');
+        $('.video-popup').show();
+    } else {
+        // Per desktop: ripristina originali
+        $('h1').css('font-size', '3rem');
+        $('p').css('font-size', '1.4rem');
+        $('.container').css('padding', '30px');
+        $('.video-popup').show();
+    }
+});
